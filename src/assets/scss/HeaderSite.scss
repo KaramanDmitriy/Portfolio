@@ -1,5 +1,6 @@
 $text-color: #fff;
 $accent-color: #984AE8;
+$gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
 .logo {
     padding-left: 10px;
     display: inline-block;
@@ -25,6 +26,14 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: background-color .4s ease;
+    &.scrolled {
+        top: 0;
+        background-color: #302C42;
+    }
+
     @media (max-width: 1800px){
         justify-content: space-between;
     }
@@ -47,14 +56,35 @@ header {
                 color: $accent-color;
             }
             &[aria-current='page'] {
-                background: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
+                background: $gradient;
             }
         }
     }
 
 }
 .header-social {
-    margin-right: 10px;
+    margin-right: 16px;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        border-radius: 50%;
+        padding: 5px;
+        background: $gradient;
+        color: $text-color;
+        font-size: 20px;
+        transition: all .4s ease;
+        
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    li {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 .header-margin {
     margin-top: 180px;

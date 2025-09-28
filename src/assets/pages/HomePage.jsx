@@ -1,3 +1,5 @@
+import '../scss/HomePage.scss'
+
 export default function HomePage() {
     return (
         <>
