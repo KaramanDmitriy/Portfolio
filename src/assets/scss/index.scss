@@ -1,5 +1,5 @@
 $text-color: #fff;
-@import 'Fonts';
+@use 'Fonts.scss';
 
 *, *::before, *::after {
   padding: 0;
@@ -17,7 +17,8 @@ a, button {
   transition: all .2s ease;
   text-decoration: none;
   border: none;
-  background-color: transparent;  
+  background-color: transparent; 
+  color: $text-color; 
 }
 button {
   cursor: pointer;

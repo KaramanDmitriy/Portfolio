@@ -18,6 +18,7 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
     }
 }
 header {
+    z-index: 1000;
     position: fixed;
     top: 20px;
     left: 0;
@@ -86,6 +87,4 @@ header {
         }
     }
 }
-.header-margin {
-    margin-top: 180px;
-}
+

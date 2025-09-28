@@ -18,7 +18,6 @@ export default function App() {
       <div className="page-wrapper">
         <HeaderSite />
         <main>
-          <div className='header-margin'></div>
           <QueryClientProvider client={queryClient}>
             <Outlet />
           </QueryClientProvider>

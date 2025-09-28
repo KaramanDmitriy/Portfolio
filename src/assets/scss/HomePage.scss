@@ -1,0 +1,61 @@
+$gradient: linear-gradient(90deg, rgba(129, 118, 175, .8) 0%, rgba(192, 183, 232, .8) 100%);
+$text-color: #fff;
+body {
+    background: url('/public/images/Vector2.svg') no-repeat 80% 50%, url('/public/images/Vector1.svg') no-repeat left top;
+}
+#hero {
+    height: calc(100dvh - 180px);
+    position: relative;
+    background: url('/public/images/Vector4.svg') no-repeat left bottom, url('/public/images/Vector3.svg') no-repeat right bottom, url('/public/images/Vector5.svg') no-repeat right bottom;
+}
+.hero-content {
+    h1 {
+        padding-top: 20px;
+        background-image: $gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.4rem;
+        margin-bottom: 66px;
+    b {
+        -webkit-text-fill-color: $text-color;
+    }
+    }
+    p {
+        text-indent: 20px;
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        b, strong {
+            background-image: $gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }   
+}
+.hero-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 0 auto;
+    width: min(90%, 1272px);
+    margin-top: 240px;
+    
+    
+    .hero-img {
+        position: relative;
+        margin: 0 auto;
+        
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            transform: translate(-50%, -50%);
+            border-radius: 100px 100px 100px 240px;
+            background-color: rgba(192, 183, 232, .8);
+            object-position: 50% 90%;
+            box-shadow: inset 0 0 16px 12px rgba(0, 0, 0, 0.25);
+        }
+    }
+}

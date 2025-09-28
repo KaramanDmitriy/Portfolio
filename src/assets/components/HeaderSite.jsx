@@ -48,10 +48,10 @@ export default function HeaderSite() {
                         <a target="_blank" href="https://t.me/Karaman_D"><PiTelegramLogoDuotone /></a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://t.me/Karaman_D"><IoCallOutline /></a>
+                        <a target="_blank" href="tel:380987064867"><IoCallOutline /></a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://t.me/Karaman_D"><TfiEmail /></a>
+                        <a target="_blank" href="mailto:KaramanDmitriy@gmail.com?subject=Web-dev-site"><TfiEmail /></a>
                     </li>
                 </ul>
             </div>
