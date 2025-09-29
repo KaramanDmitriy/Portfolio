@@ -20,20 +20,16 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
 header {
     z-index: 1000;
     position: fixed;
-    top: 20px;
+    // top: 20px;
     left: 0;
     width: 100%;
-    padding: 20px 0 ;
+    padding: 10px 0 ;
     display: flex;
     justify-content: space-around;
     align-items: center;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     transition: background-color .4s ease;
-    &.scrolled {
-        top: 0;
-        background-color: #302C42;
-    }
 
     @media (max-width: 1800px){
         justify-content: space-between;

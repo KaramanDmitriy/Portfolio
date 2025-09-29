@@ -7,24 +7,6 @@ import { useEffect, useState } from "react";
 
 export default function HeaderSite() {
     const [socialBlock, setSocialBlock] = useState([])
-
-    useEffect(() => {
-        function handleScroll() {
-            const header = document.querySelector('header');
-            const scrollY = window.scrollY || window.pageYOffset;
-
-            if (header) {
-                if (scrollY > window.innerHeight) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
     useEffect(() => {
         fetch('data/SocialBlock.json')
             .then(res => res.json())
