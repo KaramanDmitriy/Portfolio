@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Front-end Developer",
+    "company": "Beetroot Academy",
+    "date": "21.05.2025 - 06.10.2025",
+    "img": "images/beetroot.png",
+    "alt": "Beetroot-logo"
+  },
+  {
+    "title": "Project/Product manager in IT",
+    "company": "Beetroot Academy",
+    "date": "01.12.2023 - 15.05.2025",
+    "img": "images/beetroot.png",
+    "alt": "Beetroot-logo"
+  },
+  {
+    "title": "PM in IT",
+    "company": "Genius",
+    "date": "01.02.2024 - 01.04.2024",
+    "img": "images/beetroot.png",
+    "alt": "Beetroot-logo"
+  },
+  {
+    "title": "Accounting and auditing (Облік та аудит)",
+    "company": "PNTU Yuriya Kondratiuka",
+    "date": "01.09.2012 - 30.05.2017",
+    "img": "images/pntu.jpeg",
+    "alt": "pntu-logo"
+  }
+]

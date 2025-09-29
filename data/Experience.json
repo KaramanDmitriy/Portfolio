@@ -1,0 +1,23 @@
+[
+  {
+    "img": "images/aurora.jpeg",
+    "title": "Project Manager",
+    "company": "Aurora Multimarket",
+    "from": "01.04.2024",
+    "to": "nowDate"
+  },
+  {
+    "img": "images/freelance.png",
+    "title": "Web Developer",
+    "company": "Freelance",
+    "from": "10.03.2022",
+    "to": "nowDate"
+  },
+  {
+    "img": "images/aurora.jpeg",
+    "title": "IT Support Specialist",
+    "company": "Aurora Multimarket",
+    "from": "01.07.2021",
+    "to": "01.04.2024"
+  }
+]
