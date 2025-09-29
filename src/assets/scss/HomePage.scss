@@ -1,7 +1,7 @@
 $gradient: linear-gradient(90deg, rgba(129, 118, 175, .8) 0%, rgba(192, 183, 232, .8) 100%);
 $text-color: #fff;
 body {
-    background: url('/public/images/Vector2.svg') no-repeat 80% 50%, url('/public/images/Vector1.svg') no-repeat left top;
+    background: url('/public/images/Vector2.svg') no-repeat 80% 0%, url('/public/images/Vector1.svg') no-repeat left top;
 }
 #hero {
     height: calc(100dvh - 180px);

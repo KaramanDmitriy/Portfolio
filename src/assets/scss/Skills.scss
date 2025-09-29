@@ -1,0 +1,87 @@
+$gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
+
+.skills-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 10px;
+}
+#skills {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        padding-top: 80px;
+        font-size: 2.2rem;
+        text-align: center;
+        text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        margin-bottom: 40px;
+    }
+    .skills-main-title {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        text-shadow: 4px 10px 6px rgba(5,5,5,.6);
+    }
+    .experience-list {
+        padding-left: 20px;
+        li {
+            display: flex;
+            justify-content: start;
+            gap: 4px;
+            align-items:center;
+            margin-bottom: 12px;
+            .experience-img {
+                max-width: 60px;
+                img {
+                    border-radius: 50%;
+                }
+                
+            }
+            
+        }
+    }
+}
+.experience-title, .education-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.experience-date, .education-date {
+    // padding-left: 20px;
+    // opacity: .8;
+    color:rgba(192, 183, 232, .6);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.education-company, .experience-company {
+    padding-left: 4px;
+}
+.skills-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.education-list {
+    padding-left: 20px;
+    li {
+        display: flex;
+        justify-content: start;
+        gap: 4px;
+        align-items:center;
+        margin-bottom: 12px;
+        .education-img {
+            max-width: 60px;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.skills-img {
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    max-width: 400px;
+    img {
+        transform: rotateY(180deg);
+        border-radius: 240px 100px 240px 100px;
+        box-shadow: 6px 16px 16px 8px rgba(129, 118, 175, .6);
+    }
+}

@@ -3,9 +3,11 @@ import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { IoCallOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 import '../scss/HeaderSite.scss'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function HeaderSite() {
+    const [socialBlock, setSocialBlock] = useState([])
+
     useEffect(() => {
         function handleScroll() {
             const header = document.querySelector('header');
@@ -23,6 +25,16 @@ export default function HeaderSite() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+    useEffect(() => {
+        fetch('data/SocialBlock.json')
+            .then(res => res.json())
+            .then(data => setSocialBlock(data));
+    }, []);
+    const iconMap = {
+        telegram: <PiTelegramLogoDuotone />,
+        call: <IoCallOutline />,
+        email: <TfiEmail />
+    };
     return (
         <header >
             <a href="#" className="logo"><img src="images/logo1.png" alt="logo" />Web Developer</a>
@@ -44,18 +56,13 @@ export default function HeaderSite() {
             </nav>
             <div>
                 <ul className="header-social">
-                    <li>
-                        <a target="_blank" href="https://t.me/Karaman_D"><PiTelegramLogoDuotone /></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="tel:380987064867"><IoCallOutline /></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="mailto:KaramanDmitriy@gmail.com?subject=Web-dev-site"><TfiEmail /></a>
-                    </li>
+                    {socialBlock.map((socialBlockItem, index) => (
+                        <li key={index}>
+                            <a target="_blank" href={socialBlockItem.href}>{iconMap[socialBlockItem.img]}</a>
+                        </li>
+                    ))}
                 </ul>
             </div>
-
         </header>
     )
 }

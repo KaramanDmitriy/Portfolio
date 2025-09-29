@@ -1,0 +1,18 @@
+[
+    { 
+      "img": "telegram",
+      "title": "Напиши в телеграм",
+      "subtitle": "https://t.me/Karaman_D",
+      "href" : "https://t.me/Karaman_D"},
+
+    { 
+      "img": "call",
+      "title": "Зателефонуй",
+      "subtitle": "+38(098) 706 48 67",
+      "href" : "tel:380987064867"},
+    { 
+      "img": "email",
+      "title": "Напиши на пошту",
+      "subtitle": "KaramanDmitriy@gmail.com",
+      "href" : "mailto:KaramanDmitriy@gmail.com?subject=Web-dev-site"}
+]
