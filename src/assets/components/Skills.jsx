@@ -19,12 +19,18 @@ export default function Skills() {
             .then(res => res.json())
             .then(data => setEducationFetch(data));
     }, []);
+    const [toolsFetch, setToolsFetch] = useState([])
+    useEffect(() => {
+        fetch('data/Tools.json')
+            .then(res => res.json())
+            .then(data => setToolsFetch(data));
+    }, []);
     return (
         <section id="skills">
             <h2>Skills (Навички)</h2>
             <div className="skills-block">
                 <div className="skills-img">
-                    <img src="images/skills-img.jpg" alt="my-photo" />
+                    <img src="images/skills-img.png" alt="my-photo" />
                 </div>
                 <div className="skills-content">
                     <div className="experience">
@@ -63,8 +69,15 @@ export default function Skills() {
                         </ul>
                     </div>
                     <div className="tools">
+                        <h4 className="skills-main-title">Tools (Інстурменти)</h4>
                         <ul className="tools-list">
-                            <li></li>
+                            {toolsFetch.map((toolsItem, index) => (
+                                <li key={index}>
+                                    <div class="box">
+                                        <p>{toolsItem}</p>
+                                    </div>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
