@@ -2,6 +2,7 @@ import '../scss/HomePage.scss'
 import SocialBlock from '../components/SocialBlock'
 import { useEffect, useState } from 'react';
 import Skills from '../components/Skills';
+import PortfolioBlock from '../components/PortfolioBlock';
 
 export default function HomePage() {
     const [hero, setHero] = useState([])
@@ -27,6 +28,7 @@ export default function HomePage() {
             </section>
             <SocialBlock />
             <Skills />
+            <PortfolioBlock />
         </>
     )
 }

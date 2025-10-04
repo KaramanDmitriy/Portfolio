@@ -1,0 +1,16 @@
+#portfolio {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        padding-top: 80px;
+        font-size: 2.4rem;
+        text-align: center;
+        text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        margin-bottom: 40px;
+    }
+    .portfolio-item {
+        height: 600px;
+        background-color: aqua;
+        margin: 0 50px;
+    }
+}
