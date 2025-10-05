@@ -1,16 +1,84 @@
+$gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
+$accent-color: #984AE8;
 #portfolio {
     width: 90%;
     margin: 0 auto;
     h2 {
-        padding-top: 80px;
+        padding-top: 140px;
         font-size: 2.4rem;
         text-align: center;
         text-shadow: 4px 12px 6px rgba(5,5,5,.6);
         margin-bottom: 40px;
     }
     .portfolio-item {
-        height: 600px;
-        background-color: aqua;
-        margin: 0 50px;
+        // height: 600px;
+        background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.6) 0%, #211E2E 100%);
+        border-radius: 60px;
+        box-shadow: 0 0px 4px 6px rgba(249, 249, 250, 0.1);
+        margin: 20px 60px;
+        padding: 20px;
+        .portfolio-item-img {
+            aspect-ratio: 10/5.2;
+            img {
+                // padding: 10px;
+                border-radius: 40px;
+                box-shadow: 0 2px 4px 6px rgba(3, 3, 4, 0.2);
+            }
+        }
+        .portfolio-item-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 14px;
+            margin-bottom: 18px;
+            text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-bottom: 14px;
+            font-size: 1.4rem;
+            &:hover {
+                color: $accent-color;
+            }
+        }
+        .portfolio-item-descr {
+            // padding-left: 16px;
+            margin-bottom: 14px;
+            text-indent: 14px;
+            text-align: justify;
+        }
+        .portfolio-item-stack {
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding-left: 14px;
+            text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+            margin-bottom: 16px;
+        }
+        .portfolio-item-stack-list {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .portfolio-item-link {
+            font-size: 1rem;
+        }
     }
+}
+.slick-dots {
+    li {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+}
+.slick-dots li.slick-active button:before {
+    color: $accent-color;
+    content: '♥';
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
 }

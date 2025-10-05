@@ -1,0 +1,29 @@
+.custom-arrow {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    width: 60px;
+    &:hover {
+        filter: drop-shadow( 1px 1px 2px #774aa4);
+    }
+}
+
+.next-arrow {
+    right: -25px;
+    &::before {
+        display: none;
+    }
+}
+
+.prev-arrow {
+    left: -25px;
+    &::before {
+        display: none;
+    }
+}
+
+
+

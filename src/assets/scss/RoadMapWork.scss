@@ -1,0 +1,114 @@
+$accent-color: #984AE8;
+#roadMap {
+    background: url('/public/images/Vector7.svg') no-repeat 0% 30%, url('/public/images/Vector8.svg') no-repeat right bottom;
+    width: 86%;
+    margin: 0 auto;
+    h2 {
+        padding-top: 140px;
+        font-size: 2.4rem;
+        text-align: center;
+        text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        margin-bottom: 40px;
+    }
+    .roadmap {
+        padding: 30px 50px;
+  
+    .point {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+        position: relative;
+    
+        &:first-child {
+            .point-index {
+                top: auto;
+                bottom: 0;
+                transform: translate(-50%, 2px) !important;
+            }
+        }    
+    
+        &:last-child {
+            .point-index {
+                top: 0;
+                transform: translate(50%, -2px) !important;
+            }
+        }   
+    
+        &:not(:last-child) {
+            border-bottom: 2px solid $accent-color;
+        }
+
+        &:nth-child(odd) {
+            align-items: flex-start;
+        
+        &:not(:first-child) {
+            border-left: 2px solid $accent-color;
+        }
+        
+        .point-index {
+            left: 0;
+            transform: translate(-50%, -50%);
+            }
+        }
+    
+        &:nth-child(even) {
+            align-items: flex-end;
+        
+            &:not(:last-child) {
+                border-right: 2px solid $accent-color;
+            }
+        
+            .point-index {
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+        }
+    
+        .point-index {
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 60px;
+            background: #151317;
+            border: 4px solid $accent-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: bold;
+        }
+    
+        .point-label {
+            flex: 1 0 100%;
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+            margin-bottom: 5px;
+        
+            @media (min-width: 641px) {
+                flex: 1 0 50%;
+                width: 50%;
+            }
+        }
+    
+        .point-text {
+            flex: 1 0 100%;
+            width: 100%;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, .8);
+        
+            @media (min-width: 641px) {
+                flex: 1 0 50%;
+                width: 50%;
+            }
+        }
+        .point-cost {
+            padding: 10px 0;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+  }
+}
+}
