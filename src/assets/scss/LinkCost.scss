@@ -1,0 +1,43 @@
+$accent-color: #984AE8;
+#link-cost {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 120px;
+    height: 280px;
+    background: url('/public/images/bg-cost8.jpeg') no-repeat 50% 0% / cover;
+    border-radius: 120px;
+    position: relative;
+    transition: all .4s ease;
+    box-shadow: 0px 0px 8px rgba(5,5,5,.6);
+    // filter: contrast(126%) hue-rotate(22deg);
+    h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2.1rem;
+        text-align: center;
+        color: #A2A2E6;
+        padding: 20px 40px;
+        border-radius: 60px;
+        background-color: #302C42;
+        transform: translate(-50%, -50%);
+        box-shadow: inset 0px 0px 8px rgba(5,5,5,.6);
+    }
+    .link-cost-btn {
+        position: absolute;
+        font-size: 1.8rem;
+        font-weight: 700;
+        bottom: -32px;
+        padding: 16px 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #302C42;
+        border-radius: 20px;
+        color: #A2A2E6;
+        transition: all .4s ease;
+        box-shadow: inset 0px 2px 2px rgba(5,5,5,.6);
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

@@ -2,7 +2,7 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
 
 .skills-block {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     align-items: center;
     gap: 10px;
 }
@@ -78,7 +78,7 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
     display: inline-flex;
     justify-content: center;
     align-items:center;
-    max-width: 500px;
+    max-width: 680px;
     img {
         // transform: rotateY(180deg);
         border-radius: 0 0 20px 20px;

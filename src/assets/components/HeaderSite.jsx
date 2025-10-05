@@ -32,7 +32,7 @@ export default function HeaderSite() {
                         <NavLink to="/blog">Blog</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contacts">Contacts</NavLink>
+                        <NavLink to="/price">Price</NavLink>
                     </li>
                 </ul>
             </nav>
