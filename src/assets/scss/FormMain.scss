@@ -1,0 +1,184 @@
+$accent-color: #984AE8;
+$bg-color: #302C42;
+#form {
+    
+    h2 {
+        padding-top: 140px;
+        font-size: 2.4rem;
+        text-align: center;
+        text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        margin-bottom: 40px;
+    }
+    fieldset {
+        position: relative;
+        border: none;
+        height: 600px;
+    }
+    div.wrap {
+        width: 500px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        vertical-align: middle;
+    }
+
+    div.wrap div {
+        position: relative;
+        margin: 50px 0;
+    }
+
+    label {
+        position: absolute;
+        top: 0;
+        font-size: 1.8rem;
+        margin: 10px;
+        padding: 0 10px;
+        
+        background-color: $bg-color;
+        -webkit-transition: top .2s ease-in-out, 
+                            font-size .2s ease-in-out;
+        transition: top .2s ease-in-out, 
+                    font-size .2s ease-in-out;
+    }
+
+    .active {
+        top: -25px;
+        font-size: 20px;
+    }
+    textarea {
+        resize: none;
+    }
+    input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 20px;
+        border: 1px solid white;
+        font-size: 20px;
+        background-color: $bg-color;
+        color: white;
+    } 
+
+    input[type=text]:focus {
+        outline: none;
+        border: 2px solid $accent-color;
+    }
+    input[type=email]:focus {
+        outline: none;
+        border: 2px solid $accent-color;
+    }
+    textarea:focus {
+        outline: none;
+        border: 2px solid $accent-color;
+    }
+    // .form-btn {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 50%;
+    //     // width: 200px;
+    //     transform: translateX(-50%);
+    //     button {
+    //         border: 1px solid #fff;
+    //         padding: 20px 40px;
+    //         font-size: 2.1rem;
+    //     }
+    // }
+    :active, :hover, :focus {
+  outline: 0!important;
+  outline-offset: 0;
+}
+::before,
+::after {
+  position: absolute;
+  content: "";
+}
+    .btn-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 10px auto 35px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  width: auto; height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0px 25px 15px;
+  min-width: 250px;
+}
+ .btn span {         
+    position: relative;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+  }
+  .btn-4 span {
+  color: $accent-color;
+  background-color: $bg-color;
+}
+.btn-4 span:hover {
+  color: $accent-color;
+}
+.btn-4::before,
+.btn-4::after {
+  width: 15%; height: 2px;
+  background-color: $accent-color;
+  z-index: 2;
+}
+  .btn.hover-border-7::before,
+.btn.hover-border-7::after {
+  bottom: 0;
+  transition: width 0.2s 0.35s ease-out;
+}
+.btn.hover-border-7::before {
+  right: 50%;
+}
+.btn.hover-border-7::after {
+  left: 50%;
+}
+.btn.hover-border-7:hover::before,
+.btn.hover-border-7:hover::after {
+  width: 50%;
+  transition: width 0.2s ease-in;   
+}
+
+.btn.hover-border-7 span::before,
+.btn.hover-border-7 span::after {
+  width: 0%; height: 0%;
+  background: transparent;
+  opacity: 0;
+  z-index: 2;
+  transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s 0.35s;
+}
+.btn.hover-border-7 span::before {
+  bottom: 0; left: 0;
+  border-left: 2px solid $accent-color;
+  border-top: 2px solid $accent-color;
+}
+.btn.hover-border-7 span::after {
+  bottom: 0; right: 0;
+  border-right: 2px solid $accent-color;
+  border-top: 2px solid $accent-color;
+}
+.btn.hover-border-7 span:hover::before,
+.btn.hover-border-7 span:hover::after {
+  width: 50%; height: 96%;
+  opacity: 1;
+  transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear, opacity 0s 0.2s;   
+}
+
+}
+
+

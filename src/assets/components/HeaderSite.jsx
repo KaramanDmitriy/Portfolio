@@ -19,7 +19,7 @@ export default function HeaderSite() {
     };
     return (
         <header >
-            <a href="#" className="logo"><img src="images/logo1.png" alt="logo" />Web Developer</a>
+            <a href="#" className="logo"><img src="images/logo.png" alt="logo" /></a>
             <nav>
                 <ul className="header-navbar">
                     <li>

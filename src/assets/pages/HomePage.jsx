@@ -5,6 +5,7 @@ import Skills from '../components/Skills';
 import PortfolioBlock from '../components/PortfolioBlock';
 import RoadMapWork from '../components/RoadMapWork';
 import LinkCost from '../components/LinkCost';
+import FormMain from '../components/FormMain';
 
 export default function HomePage() {
     const [hero, setHero] = useState([])
@@ -33,6 +34,7 @@ export default function HomePage() {
             <PortfolioBlock />
             <RoadMapWork />
             <LinkCost />
+            <FormMain />
         </>
     )
 }

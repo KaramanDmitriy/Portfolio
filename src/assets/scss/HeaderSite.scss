@@ -3,19 +3,11 @@ $accent-color: #984AE8;
 $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
 .logo {
     padding-left: 10px;
-    display: inline-block;
-    width: 100px;
+    display: block;
+    width: 140px;
     cursor: pointer;
-    text-align: center;
-    font-weight: 700;
     color: $text-color;
     transition: all .4s ease;
-    &:hover {
-        color: $accent-color;
-    }
-    img {
-        margin-bottom: 5px;
-    }
 }
 header {
     z-index: 1000;
