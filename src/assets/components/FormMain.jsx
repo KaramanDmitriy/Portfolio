@@ -1,11 +1,35 @@
 import '../scss/FormMain.scss'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function FormMain() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [idea, setIdea] = useState("");
     const [phone, setPhone] = useState("");
+    const [activePosts, setActivePosts] = useState(false);
+
+    useEffect(() => {
+        // Початкова активація
+        setActivePosts(true);
+        const initialTimeout = setTimeout(() => {
+            setActivePosts(false);
+        }, 1500);
+
+        // Циклічна активація
+        const interval = setInterval(() => {
+            setActivePosts(true);
+            setTimeout(() => {
+                setActivePosts(false);
+            }, 1500);
+        }, 2000);
+
+        // Очистка таймерів при розмонтуванні
+        return () => {
+            clearTimeout(initialTimeout);
+            clearInterval(interval);
+        };
+    }, []);
+
 
     const [activeField, setActiveField] = useState({
         name: false,
@@ -28,6 +52,7 @@ export default function FormMain() {
         event.preventDefault();
         alert(`Ім’я, яке ви ввели, було: ${name}, ${email}, ${idea}, ${phone}`);
     };
+
 
     return (
         <section id="form">
@@ -92,18 +117,78 @@ export default function FormMain() {
                         {/* <div className="form-btn">
                             <button type="submit">Відправити</button>
                         </div> */}
-                        <div class="btn-holder">
-                            <button class="btn btn-4 hover-border-7">
+                        <div className="btn-holder">
+                            <button className="btn btn-4 hover-border-7">
                                 <span>Відправити</span>
                             </button>
                         </div>
 
                     </fieldset>
 
-
-
-
                 </form>
+                <div className="phone">
+                    <div className="phone-shade"></div>
+
+                    <div className="phone-speaker"></div>
+
+                    <div className="phone-screen">
+
+                        <div className="phone-header">
+                            <div className="phone-menu"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="line post-title-1"></div>
+                            <div className="line post-title-2"></div>
+                            <div className="line post-line-1"></div>
+                            <div className="line post-line-2"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="post-title-1"></div>
+                            <div className="post-title-2"></div>
+                            <div className="post-line-1"></div>
+                            <div className="post-line-2"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="post-title-1"></div>
+                            <div className="post-title-2"></div>
+                            <div className="post-line-1"></div>
+                            <div className="post-line-2"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="post-title-1"></div>
+                            <div className="post-title-2"></div>
+                            <div className="post-line-1"></div>
+                            <div className="post-line-2"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="post-title-1"></div>
+                            <div className="post-title-2"></div>
+                            <div className="post-line-1"></div>
+                            <div className="post-line-2"></div>
+                        </div>
+
+                        <div className={`phone-post ${activePosts ? 'active' : ''}`}>
+                            <div className="post-thumb"></div>
+                            <div className="post-title-1"></div>
+                            <div className="post-title-2"></div>
+                            <div className="post-line-1"></div>
+                            <div className="post-line-2"></div>
+                        </div>
+
+                    </div>
+
+                    <div className="phone-button"></div>
+                </div>
             </div>
         </section>
     );
