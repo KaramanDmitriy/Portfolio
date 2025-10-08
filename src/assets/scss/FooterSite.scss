@@ -1,0 +1,84 @@
+$accent-color: #984AE8;
+footer {
+    margin-top: 50px;
+    border-radius: 60px 60px 0 0;
+    box-shadow: 5px -10px 8px rgba(5,5,5,.5);
+    height: 300px;    
+    background: linear-gradient(-45deg, #a55137, #893857, #4f2579, #166f5b);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+  h2 {
+        padding-top: 40px;
+        font-size: 2.4rem;
+        text-align: center;
+        text-shadow: 4px 12px 6px rgba(5,5,5,.6);
+        margin-bottom: 40px;
+    }
+    p.footer-q {
+        padding-top: 40px;
+        text-align: center;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        overflow: hidden;
+        background: linear-gradient(90deg, rgba(62, 71, 82, .6), #fff, rgba(98, 113, 132, 0.6));
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 8s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    }
+    .footer-items {
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: 700;
+        a {
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+    .footer-navbar {
+        li {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .footer-social {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        li {
+            margin-top: 20px;
+            font-size: 2.2rem;
+        }
+    }
+
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

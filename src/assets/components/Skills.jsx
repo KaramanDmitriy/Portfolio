@@ -73,7 +73,7 @@ export default function Skills() {
                         <ul className="tools-list">
                             {toolsFetch.map((toolsItem, index) => (
                                 <li key={index}>
-                                    <div class="box">
+                                    <div className="box">
                                         <p>{toolsItem}</p>
                                     </div>
                                 </li>

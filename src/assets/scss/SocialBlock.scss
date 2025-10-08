@@ -59,9 +59,8 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .8) 0%, rgba(192, 183, 232
         background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.6) 0%, #211E2E 100%);
         border-radius: 60px;
         box-shadow: 0 0px 4px 6px rgba(249, 249, 250, 0.1);
-        padding: 50px;
+        padding: 40px 50px;
         text-indent: 20px;
-        padding-left: 16px;
         position: relative;
         &::after {
             content: url(/public/images/arrow-small-right.svg);
