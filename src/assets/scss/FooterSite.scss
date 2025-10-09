@@ -34,13 +34,19 @@ footer {
         padding-top: 40px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
+        gap: 120px;
         font-size: 1.6rem;
         font-weight: 700;
+        margin-bottom: 10px;
         a {
             &:hover {
                 color: $accent-color;
             }
+        }
+        .footer-item {
+            text-align: center;
         }
     }
     .footer-navbar {
@@ -81,4 +87,12 @@ footer {
   100% {
     background-position: 0 50%;
   }
+}
+.footer-c {
+  border-top: 2px solid rgba(129, 191, 202, 0.6);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-size: 1.1rem;
 }

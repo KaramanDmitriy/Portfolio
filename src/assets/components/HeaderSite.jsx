@@ -23,16 +23,16 @@ export default function HeaderSite() {
             <nav>
                 <ul className="header-navbar">
                     <li>
-                        <NavLink className="me-3" to="/">Home</NavLink>
+                        <NavLink className="me-3" to="/">Загальна</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/portfolio" className="me-3">Portfolio</NavLink>
+                        <NavLink to="/portfolio" className="me-3">Портфоліо</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/blog">Blog</NavLink>
+                        <NavLink to="/blog">Блог</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/price">Price</NavLink>
+                        <NavLink to="/price">Прайс</NavLink>
                     </li>
                 </ul>
             </nav>

@@ -1,7 +1,9 @@
+import PortfolioBlock from "../components/PortfolioBlock";
+import "../scss/Portfolio.scss";
 export default function Portfolio() {
     return (
         <>
-            <h2>Portfolio Page</h2>
+            <PortfolioBlock />
         </>
     )
 }

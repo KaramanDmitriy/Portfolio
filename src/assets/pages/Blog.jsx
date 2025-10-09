@@ -28,7 +28,8 @@ export default function Blog() {
             <div className="blog-list">
                 {blogFetch.slice(0, 10).map((post, idx) => (
                     <div className="blog-card" key={idx}>
-                        <img src={post.image} alt={post.title} className="blog-thumb" />
+                        <div className="blog-img"><img src={post.image} alt={post.title} className="blog-thumb" /></div>
+
                         <div className="blog-info">
                             <span className="blog-date">{post.date}</span>
                             <h3>{post.title}</h3>
@@ -47,7 +48,7 @@ export default function Blog() {
                         <button className="modal-close" onClick={closeModal}>×</button>
                         <img src={activePost.image} alt={activePost.title} className="modal-img" />
                         <span className="modal-date">{activePost.date}</span>
-                        <h2>{activePost.title}</h2>
+                        <h2 className="modal-titile">{activePost.title}</h2>
                         <div className="modal-article">
                             {activePost.article.map((para, i) => (
                                 <p key={i}>{para}</p>

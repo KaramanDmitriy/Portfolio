@@ -22,6 +22,7 @@ export default function HomePage() {
                         <h1 dangerouslySetInnerHTML={{ __html: hero[0]?.title }}></h1>
                         <p dangerouslySetInnerHTML={{ __html: hero[0]?.text1 }}></p>
                         <p dangerouslySetInnerHTML={{ __html: hero[0]?.text2 }}></p>
+                        <p dangerouslySetInnerHTML={{ __html: hero[0]?.text3 }}></p>
                     </div>
                     <div className="hero-img">
                         <img src={hero[0]?.imgSrc} alt="Developer" />
