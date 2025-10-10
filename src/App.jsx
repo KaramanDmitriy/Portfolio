@@ -6,17 +6,19 @@ import HeaderSite from './assets/components/HeaderSite'
 import FooterSite from './assets/components/FooterSite'
 import Overlay from './assets/components/Overlay'
 import BurgerMenu from './assets/components/BurgerMenu'
+import { useState } from 'react';
 
 const queryClient = new QueryClient()
 
 export default function App() {
+  const [burgerOpen, setBurgerOpen] = useState(false);
 
   return (
     <>
       <Overlay />
-      <BurgerMenu />
+      <BurgerMenu burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
       <div className="page-wrapper">
-        <HeaderSite />
+        <HeaderSite burgerOpen={burgerOpen} setBurgerOpen={setBurgerOpen} />
         <main>
           <QueryClientProvider client={queryClient}>
             <Outlet />

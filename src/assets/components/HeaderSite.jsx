@@ -5,8 +5,9 @@ import { TfiEmail } from "react-icons/tfi";
 import '../scss/HeaderSite.scss'
 import { useEffect, useState } from "react";
 
-export default function HeaderSite() {
+export default function HeaderSite({ burgerOpen, setBurgerOpen }) {
     const [socialBlock, setSocialBlock] = useState([])
+    const toggleMenu = () => setBurgerOpen(prev => !prev);
     useEffect(() => {
         fetch('data/SocialBlock.json')
             .then(res => res.json())
@@ -17,6 +18,11 @@ export default function HeaderSite() {
         call: <IoCallOutline />,
         email: <TfiEmail />
     };
+    // const [burgerOpen, setBurgerOpen] = useState(false);
+
+    // const toggleMenu = () => {
+    //     setBurgerOpen(prev => !prev);
+    // };
     return (
         <header >
             <a href="#" className="logo"><img src="images/logo.png" alt="logo" /></a>
@@ -44,6 +50,15 @@ export default function HeaderSite() {
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className="burger">
+                <button
+                    type="button"
+                    onClick={toggleMenu}
+                    className={`burger-btn${burgerOpen ? ' close' : ''}`}
+                >
+                    <span></span>
+                </button>
             </div>
         </header>
     )

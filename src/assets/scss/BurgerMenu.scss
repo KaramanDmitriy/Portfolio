@@ -1,0 +1,87 @@
+$accent-color: #984AE8;
+$gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232, .5) 100%);
+.burger-menu {
+    display: none;
+    // @media (max-width: 768px){
+    //     display: block;
+    // }
+    &.open {
+        display: block;
+    }
+    .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    .footer-item {
+        margin-bottom: 30px;
+        .logo {
+            img {
+                width: 120px;
+                height: auto;
+            }
+        }
+    }
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                a {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: color .4s ease;
+                    &:hover {
+                        color: $accent-color;
+                    }
+                    &[aria-current='page'] {
+                        background: $accent-color;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    .footer-item {
+        font-size: 2rem;
+        color: #F3BDA7;
+        font-weight: 700;
+        text-align: center;
+         
+        .footer-social {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            color: #F3BDA7;
+            li {
+                margin-top: 10px;
+                a {
+                    color: #fff;
+                    font-size: 2.4rem;
+                    transition: color .4s ease;
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+        
+    }
+    }
+}

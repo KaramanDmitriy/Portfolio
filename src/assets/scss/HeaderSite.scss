@@ -31,6 +31,9 @@ header {
     display: flex;
     justify-content: center;
     gap: 40px;
+    @media (max-width: 768px){
+        display: none;
+    }
     li {
         a {
             color: $text-color;
@@ -53,6 +56,9 @@ header {
 }
 .header-social {
     margin-right: 16px;
+    @media (max-width: 768px){
+        display: none;
+    }
     a {
         display: flex;
         justify-content: center;
@@ -73,6 +79,61 @@ header {
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+.burger {
+    display: none;
+    @media (max-width: 768px){
+        display: block;
+    }
+    .burger-btn {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin-right: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        span, 
+        span::before,
+        span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: $text-color;
+            border-radius: 2px;
+            transition: all .4s ease;
+        }
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        span::before {
+            content: '';
+            top: -10px;
+        }
+        span::after {
+            content: '';
+            top: 10px;
+        }
+        &:hover span,
+        &:hover span::before,
+        &:hover span::after {
+            background-color: $accent-color;
+        }
+        &.close span {
+            background-color: transparent;
+        }
+        &.close span::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+        &.close span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        
     }
 }
 
