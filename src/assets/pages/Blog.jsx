@@ -28,7 +28,7 @@ export default function Blog() {
             <div className="blog-list">
                 {blogFetch.slice(0, 10).map((post, idx) => (
                     <div className="blog-card" key={idx}>
-                        <div className="blog-img"><img src={post.image} alt={post.title} className="blog-thumb" /></div>
+                        <a className="blog-img-wrap" onClick={() => openModal(post)}><div className="blog-img"><img src={post.image} alt={post.title} className="blog-thumb" /></div></a>
 
                         <div className="blog-info">
                             <span className="blog-date">{post.date}</span>
@@ -53,6 +53,9 @@ export default function Blog() {
                             {activePost.article.map((para, i) => (
                                 <p key={i}>{para}</p>
                             ))}
+                        </div>
+                        <div className="btn-wrap-close">
+                            <button className="modal-close-down" onClick={closeModal}>Закрити</button>
                         </div>
                     </div>
                 </div>

@@ -11,13 +11,16 @@ $accent-color: #984AE8;
         margin-bottom: 40px;
     }
     .roadmap {
-        padding: 30px 50px;
-  
+        // padding: 30px 50px;
+        
     .point {
         display: flex;
         flex-direction: column;
         padding: 10px 50px;
         position: relative;
+        @media (min-width: 490px) {
+            padding: 10px 34px;
+        }
     
         &:first-child {
             .point-index {
@@ -85,9 +88,9 @@ $accent-color: #984AE8;
             font-size: 1.6rem;
             font-weight: 700;
             text-shadow: 4px 12px 6px rgba(5,5,5,.6);
-            margin-bottom: 5px;
+            margin-bottom: 12px;
         
-            @media (min-width: 641px) {
+            @media (min-width: 680px) {
                 flex: 1 0 50%;
                 width: 50%;
             }
@@ -99,7 +102,7 @@ $accent-color: #984AE8;
             font-size: 1.2rem;
             color: rgba(255, 255, 255, .8);
         
-            @media (min-width: 641px) {
+            @media (min-width: 680px) {
                 flex: 1 0 50%;
                 width: 50%;
             }
@@ -111,4 +114,18 @@ $accent-color: #984AE8;
         }
   }
 }
+}
+
+@media (min-width: 320px) {
+    #roadMap .roadmap .point {
+        padding: 10px 34px;
+    }
+}
+@media (min-width: 420px) {
+    #roadMap .roadmap {
+        padding: 30px 10px;
+    }
+    #roadMap .roadmap .point {
+        padding: 10px 50px;
+    }
 }

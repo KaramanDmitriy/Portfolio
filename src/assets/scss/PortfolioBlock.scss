@@ -46,7 +46,8 @@ $accent-color: #984AE8;
             // padding-left: 16px;
             margin-bottom: 14px;
             text-indent: 14px;
-            text-align: justify;
+            // text-align: justify;
+            text-wrap: wrap;
         }
         .portfolio-item-stack {
             font-size: 1.4rem;
@@ -57,7 +58,8 @@ $accent-color: #984AE8;
         }
         .portfolio-item-stack-list {
             margin-bottom: 20px;
-            text-align: justify;
+            // text-align: justify;
+            text-wrap: wrap;
         }
         .portfolio-item-link {
             font-size: 1rem;

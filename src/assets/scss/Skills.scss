@@ -11,7 +11,7 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
     margin: 0 auto;
     background:  url('/public/images/Vector7.svg') no-repeat left bottom, url('/public/images/Vector8.svg') no-repeat right bottom;
     h2 {
-        padding-top: 140px;
+        padding-top: 80px;
         font-size: 2.4rem;
         text-align: center;
         text-shadow: 4px 12px 6px rgba(5,5,5,.6);
@@ -159,4 +159,34 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
 		--gradX: 50%;
 		--gradY: 0%;
 	}
+}
+@media (max-width: 1400px) {
+    .skills-block {
+        grid-template-columns: 1fr;
+        text-align: center;
+        .skills-img {
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 980px) {
+    .skills-img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 620px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+        div {
+            grid-column: span 1; 
+        }        
+    }
+    #skills .experience-list li, .education-list li {
+        justify-content: space-between;
+    }
+    .tools {
+        display: none;
+    }
 }

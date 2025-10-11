@@ -4,7 +4,7 @@ $gradient: linear-gradient(45deg, rgba(60, 53, 87, 0.96) 0%, rgba(192, 183, 232,
     padding-top: 60px;
     background: url('/public/images/Vector4.svg') no-repeat left bottom, url('/public/images/Vector3.svg') no-repeat right bottom;
     h2 {
-        padding-top: 120px;
+        padding-top: 90px;
         font-size: 2.4rem;
         text-align: center;
         text-shadow: 4px 12px 6px rgba(5,5,5,.6);
@@ -19,7 +19,7 @@ $gradient: linear-gradient(45deg, rgba(60, 53, 87, 0.96) 0%, rgba(192, 183, 232,
 }
 
 .blog-card {
-  padding-top: 16px;
+  // padding-top: 16px;
   background: transparent;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.48);
@@ -30,7 +30,20 @@ $gradient: linear-gradient(45deg, rgba(60, 53, 87, 0.96) 0%, rgba(192, 183, 232,
   transition: transform 0.2s;
   .blog-img {
     padding: 0 16px;
+    height: 240px;
+    background: rgba(101, 185, 211, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.3px);
+    -webkit-backdrop-filter: blur(3.3px);
+    border: 1px solid rgba(101, 185, 211, 0.12);
+
     img {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      align-items: center;
       border-radius: 12px;
       object-fit: contain;
     }
@@ -120,6 +133,9 @@ $gradient: linear-gradient(45deg, rgba(60, 53, 87, 0.96) 0%, rgba(192, 183, 232,
   font-size: 3rem;
   color: #000000;
   cursor: pointer;
+  &:hover {
+    color: #d93838;
+  }
 }
 .modal-img {
   width: 100%;
@@ -139,4 +155,30 @@ $gradient: linear-gradient(45deg, rgba(60, 53, 87, 0.96) 0%, rgba(192, 183, 232,
   margin-bottom: 1rem;
   line-height: 1.6;
   text-indent: 20px;
+}
+.btn-wrap-close {
+  text-align: center;
+  margin-top: 20px;
+  button.modal-close-down {
+    background: $accent-color;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.48);
+    &:hover {
+      background: #59b4d2;
+    }
+  }
+}
+.blog-img-wrap {
+  cursor: pointer;
+}
+.modal-overlay {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.6) transparent;
 }
