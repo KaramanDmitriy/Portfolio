@@ -1,0 +1,1 @@
+import{j as s,L as i}from"./index-D_Sdb2f8.js";function t(){return s.jsxs("div",{id:"link-cost",children:[s.jsx("h3",{children:"Не відкладайте ідею на потім — дізнайся вартість створення сайту прямо зараз"}),s.jsx(i,{className:"link-cost-btn",to:"/price",children:"Дізнатись ціну"})]})}export{t as default};
