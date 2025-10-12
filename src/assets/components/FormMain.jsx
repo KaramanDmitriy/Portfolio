@@ -1,5 +1,6 @@
 import '../scss/FormMain.scss'
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export default function FormMain() {
     const [name, setName] = useState("");
@@ -48,9 +49,34 @@ export default function FormMain() {
         }
     };
 
-    const handleSubmit = (event) => {
+    const [formInProgress, setFormInProgress] = useState(false);
+
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        alert(`Ім’я, яке ви ввели, було: ${name}, ${email}, ${idea}, ${phone}`);
+        if (formInProgress) return;
+
+        setFormInProgress(true);
+
+        const token = '8407817457:AAHqGaeQLBrPJNM6VGC72CV16vfaZBF26yY';
+        const chat = '-1003054409449';
+        const message = `<b>Name: </b>%0a<i>${name}</i>%0a<b>Email: </b>%0a<i>${email}</i>%0a<b>Phone: </b>%0a<i>${phone}</i>%0a<b>Idea: </b>%0a<i>${idea}</i>`;
+
+        try {
+            const resp = await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat}&parse_mode=html&text=${message}`);
+            const answer = await resp.json();
+            if (answer.ok) {
+                toast.success('Ви успішно відправили повідомлення!');
+                setName('');
+                setEmail('');
+                setPhone('');
+                setIdea('');
+            } else {
+                toast.error('Сталася помилка при відправці!');
+            }
+        } catch (error) {
+            toast.error('Сталася помилка при відправці!');
+        }
+        setFormInProgress(false);
     };
 
 

@@ -25,7 +25,7 @@ export default function App() {
           </QueryClientProvider>
         </main>
         <FooterSite />
-        <ToastContainer position="top-center" autoClose={3000} theme="dark" />
+        <ToastContainer position="top-right" autoClose={3000} theme="dark" />
       </div>
     </>
   )
