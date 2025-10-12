@@ -419,6 +419,9 @@ $borderGray: rgb(98, 96, 93);
     }
 }
 @media (max-width: 720px) {
+  #form fieldset {
+    height: 670px;
+  }
   #form label {
     font-size: 1.6rem;
   }
@@ -427,6 +430,7 @@ $borderGray: rgb(98, 96, 93);
     }
 }
 @media (max-width: 670px) {
+  
   .phone {
     display: none;
   }
