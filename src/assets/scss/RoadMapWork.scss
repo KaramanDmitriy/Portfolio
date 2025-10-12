@@ -132,3 +132,8 @@ $accent-color: #984AE8;
         padding: 10px 50px;
     }
 }
+@media (max-width: 800px) {
+    #roadMap {
+        background: none;
+    }
+}

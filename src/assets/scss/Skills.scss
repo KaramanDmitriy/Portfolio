@@ -161,6 +161,9 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
 	}
 }
 @media (max-width: 1400px) {
+    #skills {
+        background: none;
+    }
     .skills-block {
         grid-template-columns: 1fr;
         text-align: center;
