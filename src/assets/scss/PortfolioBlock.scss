@@ -3,6 +3,7 @@ $accent-color: #984AE8;
 #portfolio {
     width: 90%;
     margin: 0 auto;
+    
     h2 {
         padding-top: 140px;
         font-size: 2.4rem;
@@ -70,7 +71,9 @@ $accent-color: #984AE8;
     li {
         width: 20px;
         height: 20px;
+        margin-bottom: 6px;
     }
+    
 }
 
 .slick-dots li button:before {
@@ -83,4 +86,32 @@ $accent-color: #984AE8;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 26px;
+}
+@media (max-width: 620px) {
+    #portfolio {
+        .custom-arrow {
+            top: 100%;
+            // transform: translateY(-50%);
+        } 
+        .portfolio-item .portfolio-item-link  {
+            font-size: 0.9rem;
+        }
+        .portfolio-item {
+            margin: 20px 10px 36px;
+            padding: 16px;
+            .portfolio-item-img {
+                // aspect-ratio: 10/4.5;
+                img {
+                    border-radius: 40px;
+                }
+            }
+            .portfolio-item-stack, .portfolio-item-stack-list {
+                display: none;
+            }
+            .portfolio-item-title {
+                font-size: 1.3rem;
+            }
+        }
+
+    }
 }

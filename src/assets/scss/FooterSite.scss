@@ -96,3 +96,42 @@ footer {
   padding-top: 10px;
   font-size: 1.1rem;
 }
+@media (max-width: 1170px) {
+    footer {
+        height: auto;
+        border-radius: 40px 40px 0 0;
+        h2 {
+            font-size: 2rem;
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+        p.footer-q {
+            font-size: 1.6rem;
+            padding-top: 20px;
+        }
+        .footer-items {
+            flex-direction: column;
+            gap: 40px;
+            font-size: 1.2rem;
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+        .footer-social {
+            li {
+                font-size: 1.8rem;
+                margin-top: 10px;
+            }
+        }
+        .footer-c {
+            font-size: 1rem;
+            max-width: 300px;
+            padding-top: 6px;
+            padding-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 490px) {
+  .footer p.footer-q {
+    font-size: 1.6rem;
+  }
+}

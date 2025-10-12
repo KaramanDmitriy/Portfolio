@@ -24,6 +24,17 @@
         display: none;
     }
 }
+@media (max-width: 620px) {
+    .custom-arrow {
+        top: 100%;
 
+    }
+    .next-arrow {
+        right: 0;
+    }
+    .prev-arrow {
+        left: 0;
+    }
+}
 
 

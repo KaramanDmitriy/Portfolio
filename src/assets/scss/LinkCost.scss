@@ -9,7 +9,7 @@ $accent-color: #984AE8;
     position: relative;
     transition: all .4s ease;
     box-shadow: 0px 0px 8px rgba(5,5,5,.6);
-    // filter: contrast(126%) hue-rotate(22deg);
+    animation: bgMove 4s ease-in-out infinite alternate;
     h3 {
         position: absolute;
         top: 50%;
@@ -42,5 +42,69 @@ $accent-color: #984AE8;
         &:hover {
             color: $accent-color;
         }
+    }
+}
+@keyframes bgMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+@media (max-width: 1620px) {
+    #link-cost {
+        height: 300px;
+        h3 {
+            width: 70%;
+            border-radius: 50px;
+        }
+    }
+}
+@media (max-width: 1160px) {
+    #link-cost {
+        height: 320px;
+        border-radius: 100px;
+        h3 {
+            width: 80%;
+            font-size: 1.8rem;
+            border-radius: 40px;
+        }
+    }
+}
+@media (max-width: 790px) {
+    #link-cost {
+        height: 330px;
+        h3 {
+            width: 80%;
+            font-size: 1.6rem;
+        }
+        .link-cost-btn {
+            font-size: 1.4rem;
+            padding: 12px 24px;
+            bottom: -23px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    #link-cost {
+        height: 300px;
+        border-radius: 80px;
+        h3 {
+            width: 80%;
+            font-size: 1.3rem;
+            padding: 20px 20px;
+            border-radius: 30px;
+        }
+        .link-cost-btn {
+            font-size: 1rem;
+
+        }
+    }
+}
+@media (max-width: 436px) {
+    #link-cost .link-cost-btn {
+        text-align: center;
+        bottom: -30px;
     }
 }

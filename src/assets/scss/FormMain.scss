@@ -410,3 +410,27 @@ $borderGray: rgb(98, 96, 93);
     transform: scale(1) rotate(0);
   }
 }
+@media (max-width: 990px) {
+    #form div .wrap {
+        width: 400px;
+    }
+    .phone {
+        right: 0;
+    }
+}
+@media (max-width: 720px) {
+  #form label {
+    font-size: 1.6rem;
+  }
+  #form div .wrap {
+        width: 340px;
+    }
+}
+@media (max-width: 670px) {
+  .phone {
+    display: none;
+  }
+  #form div .wrap {
+        display: contents;
+    }
+}

@@ -15,7 +15,7 @@ export default function PortfolioBlock() {
             dots: true,
             infinite: true,
             speed: 500,
-            centerMode: true,
+            centerMode: false,
             slidesToShow: 3,
             slidesToScroll: 1,
             nextArrow: <NextArrow />,
@@ -32,6 +32,7 @@ export default function PortfolioBlock() {
                 },
                 {
                     breakpoint: 1200,
+
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -67,7 +68,7 @@ export default function PortfolioBlock() {
                                 <img src={portfolioItem.img} alt={portfolioItem.alt} />
                             </div>
                             <div className="portfolio-item-title">{portfolioItem.title}</div>
-                            <a href={portfolioItem.href} target='_blank' className="portfolio-item-link">{portfolioItem.href}</a>
+                            <a href={portfolioItem.href} target='_blank' className="portfolio-item-link">{(portfolioItem.href.length > 30) ? "Link" : portfolioItem.href}</a>
                             <div className="portfolio-item-descr">{portfolioItem.descr}</div>
                             <div className="portfolio-item-stack">Технології:</div>
                             <div className='portfolio-item-stack-list'>{portfolioItem.stackList}

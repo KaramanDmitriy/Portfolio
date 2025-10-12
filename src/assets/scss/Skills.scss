@@ -184,9 +184,15 @@ $gradient: linear-gradient(90deg, rgba(129, 118, 175, .5) 0%, rgba(192, 183, 232
         }        
     }
     #skills .experience-list li, .education-list li {
-        justify-content: space-between;
+        justify-content: start;
+        text-align: start;
+
     }
     .tools {
         display: none;
     }
+    #portfolio .portfolio-item .portfolio-item-title.portfolio-item-title{
+        font-size: 1.4rem;
+    }
+ 
 }
