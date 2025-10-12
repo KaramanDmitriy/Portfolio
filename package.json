@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.2",
