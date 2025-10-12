@@ -17,6 +17,7 @@ body {
         -webkit-text-fill-color: transparent;
         font-size: 2.4rem;
         margin-bottom: 40px;
+        text-shadow: 4px 10px 6px rgba(5,5,5,.3);
     b {
         -webkit-text-fill-color: $text-color;
     }
@@ -107,7 +108,7 @@ body {
         background: url('/public/images/Vector2.svg') no-repeat 100% 0%;
     }
     #hero {
-        background: url('/public/images/Vector4.svg') no-repeat left bottom, url('/public/images/Vector3.svg') no-repeat right bottom;
+        background: url('/public/images/Vector4.svg') no-repeat left bottom;
     }
 }
 @media (max-width: 430px) {
