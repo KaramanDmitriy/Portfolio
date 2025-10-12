@@ -1,9 +1,12 @@
-import PortfolioBlock from "../components/PortfolioBlock";
 import "../scss/Portfolio.scss";
+import { Suspense, lazy } from 'react';
 export default function Portfolio() {
+    const PortfolioBlock = lazy(() => import('../components/PortfolioBlock'));
     return (
         <>
-            <PortfolioBlock />
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <PortfolioBlock />
+            </Suspense>
         </>
     )
 }

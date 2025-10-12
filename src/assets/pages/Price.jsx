@@ -18,7 +18,7 @@ export default function Price() {
                         <div key={index} className="price-item">
                             <h3 className='price-item-title'>{priceItem.title}</h3>
                             <div className="price-img">
-                                <img src={priceItem.image} alt="price logo" />
+                                <img src={priceItem.image} alt="price logo" loading="lazy" />
                             </div>
                             <p className='price-item-descr'>{priceItem.description}</p>
                             <div className="price-scope-items">

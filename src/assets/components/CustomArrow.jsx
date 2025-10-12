@@ -6,7 +6,7 @@ export function NextArrow(props) {
             className={`custom-arrow next-arrow`}
             onClick={onClick}
         >
-            <img src="images/right-arrow.svg" alt="arrow" />
+            <img src="images/right-arrow.svg" alt="arrow" loading="lazy" />
         </div >
     );
 }
@@ -18,7 +18,7 @@ export function PrevArrow(props) {
             className={`custom-arrow prev-arrow`}
             onClick={onClick}
         >
-            <img src="images/left-arrow.svg" alt="arrow" />
+            <img src="images/left-arrow.svg" alt="arrow" loading="lazy" />
         </div>
     );
 }

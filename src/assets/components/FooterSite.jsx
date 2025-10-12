@@ -33,7 +33,7 @@ export default function FooterSite() {
                 <p className='footer-q'>"Сайт — це інвестиція у майбутнє вашого бізнесу"</p>
                 <div className="footer-items">
                     <div className="footer-item">
-                        <div className="logo"><a href="#" className="logo"><img src="images/logo.png" alt="logo" /></a></div>
+                        <div className="logo"><a href="#" className="logo"><img src="images/logo.png" alt="logo" loading="lazy" /></a></div>
                     </div>
                     {/* <nav>
                         <ul className="footer-navbar">

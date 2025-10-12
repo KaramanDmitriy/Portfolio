@@ -30,7 +30,7 @@ export default function Skills() {
             <h2>Skills (Навички)</h2>
             <div className="skills-block">
                 <div className="skills-img">
-                    <img src="images/skills-img.png" alt="my-photo" />
+                    <img src="images/skills-img.png" alt="my-photo" loading="lazy" />
                 </div>
                 <div className="skills-content">
                     <div className="experience">
@@ -39,7 +39,7 @@ export default function Skills() {
                             {experienceFetch.map((experienceItem, index) => (
                                 <li key={index}>
                                     <div className="experience-img">
-                                        <img src={experienceItem.img} alt="logo" />
+                                        <img src={experienceItem.img} alt="logo" loading="lazy" />
                                     </div>
                                     <div className="experience-content">
                                         <div className="experience-title">{experienceItem.title}</div>
@@ -57,7 +57,7 @@ export default function Skills() {
                         <ul className="education-list">
                             {educationFetch.map((educationItem, index) => (
                                 <li key={index}>
-                                    <div className="education-img"><img src={educationItem.img} alt={educationItem.alt} /></div>
+                                    <div className="education-img"><img src={educationItem.img} alt={educationItem.alt} loading="lazy" /></div>
                                     <div className="education-content">
                                         <div className="education-title">{educationItem.title}</div>
                                         <div className="education-company">{educationItem.company}</div>

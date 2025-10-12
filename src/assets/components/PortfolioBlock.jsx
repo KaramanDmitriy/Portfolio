@@ -65,7 +65,7 @@ export default function PortfolioBlock() {
                     <div key={index} className="p-slider-item">
                         <div className='portfolio-item' >
                             <div className="portfolio-item-img">
-                                <img src={portfolioItem.img} alt={portfolioItem.alt} />
+                                <img src={portfolioItem.img} alt={portfolioItem.alt} loading="lazy" />
                             </div>
                             <div className="portfolio-item-title">{portfolioItem.title}</div>
                             <a href={portfolioItem.href} target='_blank' className="portfolio-item-link">{(portfolioItem.href.length > 30) ? "Link" : portfolioItem.href}</a>

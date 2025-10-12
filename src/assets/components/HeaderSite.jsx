@@ -25,7 +25,7 @@ export default function HeaderSite({ burgerOpen, setBurgerOpen }) {
     // };
     return (
         <header >
-            <a href="#" className="logo"><img src="images/logo.png" alt="logo" /></a>
+            <a href="#" className="logo"><img src="images/logo.png" alt="logo" loading="lazy" /></a>
             <nav>
                 <ul className="header-navbar">
                     <li>

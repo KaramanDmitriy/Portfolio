@@ -1,11 +1,6 @@
 import '../scss/HomePage.scss'
-import SocialBlock from '../components/SocialBlock'
 import { useEffect, useState } from 'react';
-import Skills from '../components/Skills';
-import PortfolioBlock from '../components/PortfolioBlock';
-import RoadMapWork from '../components/RoadMapWork';
-import LinkCost from '../components/LinkCost';
-import FormMain from '../components/FormMain';
+import { Suspense, lazy } from 'react';
 
 export default function HomePage() {
     const [hero, setHero] = useState([])
@@ -14,6 +9,12 @@ export default function HomePage() {
             .then(res => res.json())
             .then(data => setHero(data));
     }, []);
+    const SocialBlock = lazy(() => import('../components/SocialBlock'));
+    const Skills = lazy(() => import('../components/Skills'));
+    const PortfolioBlock = lazy(() => import('../components/PortfolioBlock'));
+    const RoadMapWork = lazy(() => import('../components/RoadMapWork'));
+    const LinkCost = lazy(() => import('../components/LinkCost'));
+    const FormMain = lazy(() => import('../components/FormMain'));
     return (
         <>
             <section id='hero'>
@@ -25,17 +26,29 @@ export default function HomePage() {
                         <p dangerouslySetInnerHTML={{ __html: hero[0]?.text3 }}></p>
                     </div>
                     <div className="hero-img">
-                        <img src={hero[0]?.imgSrc} alt="Developer" />
+                        <img src={hero[0]?.imgSrc} alt="Developer" loading="lazy" />
                     </div>
                 </div>
                 <div className='hero-footer'></div>
             </section>
-            <SocialBlock />
-            <Skills />
-            <PortfolioBlock />
-            <RoadMapWork />
-            <LinkCost />
-            <FormMain />
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <SocialBlock />
+            </Suspense>
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <Skills />
+            </Suspense>
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <PortfolioBlock />
+            </Suspense>
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <RoadMapWork />
+            </Suspense>
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <LinkCost />
+            </Suspense>
+            <Suspense fallback={<div>Завантаження...</div>}>
+                <FormMain />
+            </Suspense>
         </>
     )
 }

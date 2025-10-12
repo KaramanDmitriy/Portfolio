@@ -43,7 +43,7 @@ export default function SocialBlock() {
                 <div className="enticement">
                     <h3 dangerouslySetInnerHTML={{ __html: enticement[0]?.title }}></h3>
                     <div className="enticement-arrow">
-                        <img src="images/Component1.svg" alt="Arrow" />
+                        <img src="images/Component1.svg" alt="Arrow" loading="lazy" />
                     </div>
                     <p>{enticement[0]?.text}</p>
                 </div>
