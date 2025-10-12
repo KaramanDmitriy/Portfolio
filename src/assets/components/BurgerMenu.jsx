@@ -33,16 +33,16 @@ export default function BurgerMenu({ burgerOpen, setBurgerOpen }) {
                 <nav>
                     <ul className="header-navbar">
                         <li>
-                            <NavLink className="me-3" to="/">Загальна</NavLink>
+                            <NavLink className="me-3" to="/" onClick={() => setBurgerOpen(false)}>Загальна</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/portfolio" className="me-3">Портфоліо</NavLink>
+                            <NavLink to="/portfolio" className="me-3" onClick={() => setBurgerOpen(false)}>Портфоліо</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/blog">Блог</NavLink>
+                            <NavLink to="/blog" onClick={() => setBurgerOpen(false)}>Блог</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/price">Прайс</NavLink>
+                            <NavLink to="/price" onClick={() => setBurgerOpen(false)}>Прайс</NavLink>
                         </li>
                     </ul>
                 </nav>

@@ -26,7 +26,7 @@ export default function HomePage() {
                         <p dangerouslySetInnerHTML={{ __html: hero[0]?.text3 }}></p>
                     </div>
                     <div className="hero-img">
-                        <img src={hero[0]?.imgSrc} alt="Developer" loading="lazy" />
+                        <img src='images/Hero.png' alt="Developer" fetchpriority="high" />
                     </div>
                 </div>
                 <div className='hero-footer'></div>
