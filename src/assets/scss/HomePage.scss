@@ -4,7 +4,9 @@ body {
     background: url('/public/images/Vector2.svg') no-repeat 80% 0%, url('/public/images/Vector1.svg') no-repeat left top;
 }
 #hero {
+    min-height: 650px;
     height: calc(100dvh - 180px);
+    
     position: relative;
     background: url('/public/images/Vector4.svg') no-repeat left bottom, url('/public/images/Vector3.svg') no-repeat right bottom, url('/public/images/Vector5.svg') no-repeat right bottom;
 }
@@ -41,6 +43,7 @@ body {
     margin: 0 auto;
     width: min(90%, 1380px);
     margin-top: 220px;
+    
     
     
     .hero-img {
